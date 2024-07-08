@@ -5,13 +5,6 @@ Created on Wed Jun  5 10:26:55 2024
 @author: jperezr
 """
 
-import streamlit as st
-import yfinance as yf
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from datetime import datetime
-
 # Configuración de la aplicación
 st.title('Análisis de Portafolios')
 st.title('Modelo de Markowitz')
@@ -19,6 +12,32 @@ st.header("Creado por: Javier Horacio Pérez Ricárdez")
 
 st.write("")
 st.write("")
+
+# Sección de ayuda en la barra lateral
+st.sidebar.title("Ayuda")
+st.sidebar.write("""
+Esta aplicación permite analizar portafolios de inversión utilizando el Modelo de Markowitz. 
+A continuación, se detallan los pasos y funcionalidades:
+
+1. **Entrada de Tickers**: Ingrese las abreviaturas de los indicadores bursátiles (tickers) que desea analizar. 
+   Ejemplo: KO,TLT,LQD,SPY,AAPL.
+
+2. **Selección de Fechas**: Especifique el rango de fechas para el análisis.
+
+3. **Descarga de Datos**: La aplicación descarga datos de precios ajustados de Yahoo Finance para los tickers y el rango de fechas seleccionados.
+
+4. **Cálculo de Rendimientos Diarios**: Se calculan los rendimientos diarios de los precios ajustados.
+
+5. **Rendimiento Esperado**: Se calcula el rendimiento esperado (media de los rendimientos diarios).
+
+6. **Matriz de Covarianza**: Se calcula la matriz de covarianza de los rendimientos.
+
+7. **Simulación de Portafolios**: Se simulan 10,000 portafolios aleatorios para encontrar la mejor combinación de retorno y riesgo.
+
+8. **Resultados de las Simulaciones**: Se muestran los resultados de las simulaciones, incluyendo el portafolio con la mayor relación de Sharpe.
+
+9. **Gráfico de Dispersión**: Se visualizan los portafolios simulados en un gráfico de riesgo vs rendimiento, destacando el portafolio óptimo.
+""")
 
 # Entrada de tickers
 st.write("Los tickers son las abreviaturas de los indicadores, se pueden consultar en Yahoo Finance")
