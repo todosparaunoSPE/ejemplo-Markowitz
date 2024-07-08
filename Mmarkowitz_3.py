@@ -45,6 +45,10 @@ A continuación, se detallan los pasos y funcionalidades:
 9. **Gráfico de Dispersión**: Se visualizan los portafolios simulados en un gráfico de riesgo vs rendimiento, destacando el portafolio óptimo.
 """)
 
+# Sección de derechos de autor
+st.sidebar.write("")
+st.sidebar.write("© 2024 jahoperi")
+
 # Entrada de tickers
 st.write("Los tickers son las abreviaturas de los indicadores, se pueden consultar en Yahoo Finance")
 
