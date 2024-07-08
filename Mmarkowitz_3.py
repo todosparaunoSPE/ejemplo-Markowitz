@@ -64,7 +64,7 @@ if start_date >= end_date:
     st.error('La fecha de inicio debe ser anterior a la fecha de fin.')
 else:
     # Descargar datos de precios ajustados de Yahoo Finance
-    data = yf.download(tickers, start=start_date, end=end_date)['Adj Close']
+    data = yf.download(tickers, start=start_date, end=end_date, progress=False)['Adj Close']
 
     # Crear DataFrame con los datos descargados
     df = pd.DataFrame(data)
@@ -143,10 +143,3 @@ else:
     plt.colorbar(label='Relación de Sharpe')
     plt.scatter(max_sharpe_portfolio['StdDev'], max_sharpe_portfolio['Return'], marker='*', color='r', s=200)
     st.pyplot(plt)
-
-# Aviso de derechos de autor
-st.sidebar.markdown("""
-    ---
-    © 2024. Todos los derechos reservados.
-    Creado por jahoperi.
-""")
