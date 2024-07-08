@@ -5,9 +5,15 @@ Created on Wed Jun  5 10:26:55 2024
 @author: jperezr
 """
 
+import streamlit as st
+import yfinance as yf
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from datetime import datetime
+
 # Configuración de la aplicación
-st.title('Análisis de Portafolios')
-st.title('Modelo de Markowitz')
+st.title('Análisis de Portafolios - Modelo de Markowitz')
 st.header("Creado por: Javier Horacio Pérez Ricárdez")
 
 st.write("")
