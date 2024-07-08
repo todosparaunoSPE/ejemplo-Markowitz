@@ -47,7 +47,7 @@ A continuación, se detallan los pasos y funcionalidades:
 
 # Sección de derechos de autor
 st.sidebar.write("")
-st.sidebar.write("© 2024 jahoperi")
+st.sidebar.write("© 2024 Todos los derechos reservados. Creado por jahoperi")
 
 # Entrada de tickers
 st.write("Los tickers son las abreviaturas de los indicadores, se pueden consultar en Yahoo Finance")
