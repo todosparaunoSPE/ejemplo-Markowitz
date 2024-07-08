@@ -143,3 +143,10 @@ else:
     plt.colorbar(label='Relación de Sharpe')
     plt.scatter(max_sharpe_portfolio['StdDev'], max_sharpe_portfolio['Return'], marker='*', color='r', s=200)
     st.pyplot(plt)
+
+# Aviso de derechos de autor
+st.sidebar.markdown("""
+    ---
+    © 2024. Todos los derechos reservados.
+    Creado por jahoperi.
+""")
